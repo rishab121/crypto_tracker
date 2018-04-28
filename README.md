@@ -12,6 +12,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 To do
 - Add range in alerts
 - Explore wallet support
+- Fix links for Firefox.
 
 Sample User for Testing on Website:
 
