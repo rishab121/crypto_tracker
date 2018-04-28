@@ -1,0 +1,7 @@
+<%# Attribution -> Nat's Notes %>
+<script>
+window.userId = "<%= @current_user.id %>"
+</script>
+<div id="mycur-page">
+  Loading...
+</div>

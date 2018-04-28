@@ -1,0 +1,13 @@
+<%# Attribution -> Nat's Notes %>
+<script>
+      window.coinName = "<%= @coin_name %>";
+</script>      
+<style>
+body{
+background-image: linear-gradient(to top, #0250c5 0%, #d43f8d 100%);
+}
+</style>
+
+<div id="coin-page">
+  Loading...
+</div>

@@ -1,0 +1,34 @@
+<script>
+  window.follow_path = "<%= follow_path(@conn, :index) %>";
+  window.current_user_id = "<%= @current_user.id %>";
+</script>
+
+<br><h2 class="text-center">Listing Currencies</h2><br>
+
+<table class="table table-striped table-dark table-hover">
+  <thead>
+    <tr>
+      <th>Id </th>
+      <th>Name</th>
+
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+
+<%= for currency <- @currencies do %>
+    <tr>
+      <td><%= currency.id %></td>
+      <td><%= currency.name %></td>
+      <td> 
+        <button class="follow-button btn btn-success" data-currency-id="<%= currency.id %>" data-follow="<%= @follows[currency.id] %>" >
+          Follow
+        </button> 
+      </td>      
+
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+

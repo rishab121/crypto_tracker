@@ -1,0 +1,27 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+   <%= hidden_input f, :user_id, class: "form-control", value: @current_user.id %> 
+  </div>
+
+  <div class="form-group">
+    <%= label f, :currency_id, class: "control-label" %>
+    <%= select f, :currency_id, Enum.map(CryptoTracker.Crypto.list_currencies(), &{&1.name, &1.id}), class: "form-control" %>
+    <%= error_tag f, :user_id %>
+  </div>
+
+  <div class="form-group">
+    <%= label f, :target, class: "control-label" %>
+    <%= number_input f, :target, class: "form-control", step: 0.01 %>
+    <%= error_tag f, :target %>
+  </div>
+
+  <div class="form-group text-center">
+    <%= submit "Submit", class: "btn btn-block btn-lg btn-success" %>
+  </div>
+<% end %>

@@ -1,0 +1,16 @@
+<h2>Show Alert</h2>
+
+<ul>
+  <li>
+    <strong>Currency:</strong>
+    <%= @alert.currency.name %>
+  </li>
+  <li>
+    <strong>Target:</strong>
+    <%= @alert.target %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: alert_path(@conn, :edit, @alert) %></span>
+<span><%= link "Back", to: alert_path(@conn, :index) %></span>
